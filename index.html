@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Inspire</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="bg-image">
+	<div id="weather">
+		Your Weather Template
+	</div>
+
+	<div id="quote">
+		The Quote
+	</div>
+
+	<div class="row">
+		A Todo List
+		<div id="todo-error"></div>
+		<div class="col-4">
+			<form
+			class="text-center py-1 px-5"
+			onsubmit="app.todoController.addTodo(event)">
+			<input
+            type="text"
+            class="form-control"
+            name="description"
+            placeholder="Create a Task list"
+			/>
+			<button 
+			class="btn gradient-button gradient-button-1 mt-1 form-control" 
+			type="submit">
+            +
+		</button>
+	</form>
+</div>
+	<div id="todos"></div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+	<script type="module" src="app/main.js"></script>
+</body>
+
+</html>
+<html>

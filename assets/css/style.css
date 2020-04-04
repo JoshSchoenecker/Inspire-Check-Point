@@ -1,0 +1,9 @@
+#todo-error{
+  color: red;
+  font-size: 2em;
+}
+
+.todoListStyle {
+  border: 1px solid black;
+  margin: 2px;
+}
