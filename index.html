@@ -18,28 +18,31 @@
 		The Quote
 	</div>
 
-	<div class="row">
-		A Todo List
-		<div id="todo-error"></div>
-		<div class="col-4">
-			<form
-			class="text-center py-1 px-5"
-			onsubmit="app.todoController.addTodo(event)">
-			<input
-            type="text"
-            class="form-control"
-            name="description"
-            placeholder="Create a Task list"
-			/>
-			<button 
-			class="btn gradient-button gradient-button-1 mt-1 form-control" 
-			type="submit">
-            +
-		</button>
-	</form>
+<div class="row todoBody">
+	<div id="todo-error"></div> 
+<div class="col-4 todocontainer">
+        <label for="new-task">
+		  Add Item</label>
+		  <form onsubmit="app.todoController.addTodo(event)" >
+			<input class="form-control" name="description" id="new-task" type="text">
+			<button type="submit" class="form-control">Add</button>
+		</form>
+      
+	  <h3>Todo</h3>
+	  <!-- id="incomplete-tasks" taken from <ul> -->
+      <ul id="todos">
+      </ul>
+      
+      <h3>Completed</h3>
+      <ul id="completed-tasks">
+        <li>
+			<input type="checkbox" checked>
+			<label>See the Doctor</label>
+			<button class="delete">Delete</button>
+		</li>
+      </ul>
+    </div>
 </div>
-	<div id="todos"></div>
-	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script type="module" src="app/main.js"></script>

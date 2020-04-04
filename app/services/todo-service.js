@@ -9,9 +9,6 @@ const todoApi = axios.create({
 
 class TodoService {
 
-  constructor() {
-  }
-
   getTodos() {
     console.log("Getting the Todo List");
     todoApi.get()
@@ -31,8 +28,8 @@ class TodoService {
     todoApi.post("", todo)
       .then(res => {
         console.log(res.data.data);
-        let newTodo = new Todo(res.data.data)
-        let todos = [newTodo, ...store.State.Todos]
+        let newTodo = new Todo(res.data)
+        let todos = [newTodo, ...store.State.todos]
         this.getTodos()
       })
       .catch(err => console.error(err));
@@ -49,9 +46,12 @@ class TodoService {
   }
 
   removeTodoAsync(todoId) {
-    //TODO Work through this one on your own
-    //		what is the request type
-    //		once the response comes back, what do you need to insure happens?
+    todoApi.delete(todoId)
+    .then(res => {
+      console.log(res.data);
+      this.getTodos()
+    })
+    .catch(err => console.error(err));
   }
 }
 

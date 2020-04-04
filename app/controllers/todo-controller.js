@@ -22,7 +22,6 @@ export default class TodoController {
 
   addTodo(e) {
     console.log("addTodo controller works");
-    debugger
     event.preventDefault();
     var form = e.target;
     var todo = {
