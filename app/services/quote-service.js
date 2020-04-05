@@ -1,4 +1,4 @@
-import store from "../store";
+import store from "../store.js";
 import Quote from "../models/Quote.js"
 
 // @ts-ignore
@@ -12,7 +12,7 @@ class QuoteService {
     async getQuote() {
       console.log("getting the quote");
       let res = await _quoteApi.get();
-      store.commit("quotes", new Quote(res.data)) 
+      store.commit("quote", new Quote(res.data)) 
     }
 }
 
