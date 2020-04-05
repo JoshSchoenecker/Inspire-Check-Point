@@ -8,7 +8,6 @@ const todoApi = axios.create({
 });
 
 class TodoService {
-
   getTodos() {
     console.log("Getting the Todo List");
     todoApi.get()
@@ -19,7 +18,6 @@ class TodoService {
     .catch(error => {
       throw new Error(error)
     })
-    
   }
 
   addTodoAsync(todo) {
@@ -33,7 +31,7 @@ class TodoService {
         this.getTodos()
       })
       .catch(err => console.error(err));
-  }
+    }
 
   toggleTodoStatusAsync(todoId) {
     let todo = store.State.todos.find(todo => todo.id == todoId);

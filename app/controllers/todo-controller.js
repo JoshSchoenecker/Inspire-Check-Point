@@ -28,6 +28,7 @@ export default class TodoController {
       description: form.description.value,
     };
     TodoService.addTodoAsync(todo);
+    form.reset()
   }
 
   //NOTE This method will pass an Id to your service for the TODO that will need to be toggled

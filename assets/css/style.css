@@ -3,7 +3,15 @@
   font-size: 2em;
 }
 
-/* todo styling */
+/* NOTE weather style */
+.weatherStyle {
+  width: fit-content;
+  position: relative;
+  padding: 1rem;
+  border: 1px groove black;
+}
+
+/* NOTE todo styling */
 .todoBody {
   background: #fff;
   color: #333;
