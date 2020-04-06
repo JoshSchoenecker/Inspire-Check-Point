@@ -6,6 +6,9 @@ import store from "../store.js"
 function drawBgImg() {
     console.log("attempting to draw background");
     document.body.style.backgroundImage = `url(${store.State.bgImage.large_url})`
+    document.getElementById("bg-image").style.backgroundSize = 'cover'
+    document.getElementById("bg-image").style.backgroundRepeat = 'no-repeat'
+    document.getElementById("bg-image").style.height = '100%'
 }
 export default class ImageController {
 

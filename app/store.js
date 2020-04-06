@@ -1,7 +1,5 @@
 import Weather from "./models/weather.js";
 import Todo from "./models/Todo.js";
-import Quote from "./models/Quote.js";
-import BgImage from "./models/BgImage.js"
 
 let _state = {
   /**@type {Weather} */

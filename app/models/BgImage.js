@@ -5,11 +5,4 @@ export default class BgImage {
         this.copyright = data.copyright
         this.id = data
     }
-
-//     get Template(){
-//         return `
-//         <img src="${this.large_url}" class="bgImage">
-//         `
-//     }
-// 
 }

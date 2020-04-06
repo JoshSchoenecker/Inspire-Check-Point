@@ -10,35 +10,47 @@
 </head>
 
 
-<body>
-	<div id="bg-image">
-	<div class="row">
-		<div class="weatherStyle col-12" id="weather">
-			Your Weather Template
+<body id="bg-image">
+
+	<!-- Quote -->
+	<header class="row">
+		<div class='col-12 quoteStyle' id="quote">
 		</div>
-	</div>
+	</header>
 
-	<div class='quoteStyle' id="quote">
-	</div>
 
-<div class="row todoBody">
+
+<!-- Weather -->
+<div class="row">
+	
+		
 	<div id="todo-error"></div> 
-<div class="col-4 todocontainer">
+
+	<div class="col-6 todoBody todocontainer">
         <label for="new-task">
-		  Add Item</label>
-		  <p id="todoNum"></p>
-		  <form onsubmit="app.todoController.addTodo(event)" >
+			Add Item
+		</label>
+		<p id="todoNum"></p>
+		<form onsubmit="app.todoController.addTodo(event)" >
 			<input class="form-control" name="description" id="new-task" type="text">
-			<button type="submit" class="form-control">Add</button>
+			<button type="submit" class="form-control">
+				Add
+			</button>
 		</form>
       
-	  <h3>Todo</h3>
-	  <!-- id="incomplete-tasks" taken from <ul> -->
-      <ul id="todos">
-      </ul>
-    </div>
+	  	<h3>Todo</h3>
+<!-- id="incomplete-tasks" taken from <ul> -->
+    	<ul id="todos">
+    	</ul>
+	</div>
+
+	<div class="weatherStyle col-6 m-auto">
+		<div id="weather"> Your Weather Template </div>
+	</div>
 </div>
-</div>
+
+
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script type="module" src="app/main.js"></script>
 </body>

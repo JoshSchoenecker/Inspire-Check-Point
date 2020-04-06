@@ -2,18 +2,26 @@
   color: red;
   font-size: 2em;
 }
-
+/* NOTE quote */
 .quoteStyle {
+  border: 1px solid #333;
+  background-color: #333;
+  font-size: 1.2rem;
   color: rgb(255, 255, 255);
+  margin: 2rem;
+  border-radius: .4rem;
+  text-align: center;
+  box-shadow: 5px 5px 20px 1px aliceblue;
 }
 
 /* NOTE weather style */
 .weatherStyle {
   background-color: whitesmoke;
-  width: fit-content;
-  position: relative;
+  width: 5rem;
   padding: 1rem;
   border: 1px groove black;
+  text-align: center;
+  border-radius: .3rem;
 }
 
 /* NOTE todo styling */
@@ -23,13 +31,12 @@
 }
 .todocontainer {
   background-color: whitesmoke;
-  
   width: 400px;
-  margin: 100px auto 0;
-  border: 1px solid black;
+  border: 2px groove  black;
   padding: 7px;
+  border-radius: .3rem;
 }
-ul {
+/* ul {
   margin: 0;
   padding: 0;
 }
@@ -55,9 +62,9 @@ button {
 }
 button:hover {
   color: green;
-}
+} */
 /* Heading */
-h3,
+/* h3,
 label[for='new-task'] {
   color: #333;
   font-weight: 700;
@@ -81,20 +88,20 @@ input[type="text"] {
 }
 input[type="text"]:focus {
   color: #333;
-}
+} */
 
 /* New Task */
-label[for='new-task'] {
+/* label[for='new-task'] {
   display: block;
   margin: 0 0 20px;
 }
 input#new-task {
   float: left;
   width: 318px;
-}
+} */
 
 /* Task list */
-li {
+/* li {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -115,4 +122,4 @@ li >  input[type="text"] {
 }
 li > .delete:hover {
   color: #CF2323;
-}
+} */

@@ -9,8 +9,10 @@ export default class Weather {
 
   get Template() {
     return `
-    <h2>${this.city}</h2>
-    <h2>${this.temp}&#176</h2>`
+    <h2>
+    ${this.city} <hr>
+    ${this.temp}&#176
+    </h2>`
   }
 
   getTemp(temp) {
