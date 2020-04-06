@@ -9,15 +9,16 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="bg-image">
+
+<body>
+	<div id="bg-image">
 	<div class="row">
 		<div class="weatherStyle col-12" id="weather">
 			Your Weather Template
 		</div>
 	</div>
 
-	<div id="quote">
-		The Quote
+	<div class='quoteStyle' id="quote">
 	</div>
 
 <div class="row todoBody">
@@ -25,6 +26,7 @@
 <div class="col-4 todocontainer">
         <label for="new-task">
 		  Add Item</label>
+		  <p id="todoNum"></p>
 		  <form onsubmit="app.todoController.addTodo(event)" >
 			<input class="form-control" name="description" id="new-task" type="text">
 			<button type="submit" class="form-control">Add</button>
@@ -34,18 +36,9 @@
 	  <!-- id="incomplete-tasks" taken from <ul> -->
       <ul id="todos">
       </ul>
-      
-      <h3>Completed</h3>
-      <ul id="completed-tasks">
-        <li>
-			<input type="checkbox" checked>
-			<label>See the Doctor</label>
-			<button class="delete">Delete</button>
-		</li>
-      </ul>
     </div>
 </div>
-
+</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script type="module" src="app/main.js"></script>
 </body>

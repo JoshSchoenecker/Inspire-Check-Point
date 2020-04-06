@@ -3,8 +3,13 @@
   font-size: 2em;
 }
 
+.quoteStyle {
+  color: rgb(255, 255, 255);
+}
+
 /* NOTE weather style */
 .weatherStyle {
+  background-color: whitesmoke;
   width: fit-content;
   position: relative;
   padding: 1rem;
@@ -13,12 +18,12 @@
 
 /* NOTE todo styling */
 .todoBody {
-  background: #fff;
   color: #333;
   font-family: Lato, sans-serif;
 }
 .todocontainer {
-  display: block;
+  background-color: whitesmoke;
+  
   width: 400px;
   margin: 100px auto 0;
   border: 1px solid black;
@@ -41,7 +46,7 @@ input, button {
 button {
   background: none;
   border: 0px;
-  color: #888;
+  color: black;
   font-size: 15px;
   width: 60px;
   margin: 10px 0 0;
@@ -49,7 +54,7 @@ button {
   cursor: pointer;
 }
 button:hover {
-  color: #333;
+  color: green;
 }
 /* Heading */
 h3,
@@ -87,9 +92,6 @@ input#new-task {
   float: left;
   width: 318px;
 }
-p > button:hover {
-  color: #0FC57C;
-}
 
 /* Task list */
 li {
@@ -113,23 +115,4 @@ li >  input[type="text"] {
 }
 li > .delete:hover {
   color: #CF2323;
-}
-
-/* Completed */
-#completed-tasks label {
-  text-decoration: line-through;
-  color: #888;
-}
-
-/* Edit Task */
-ul li input[type=text] {
-  display:none;
-}
-
-ul li.editMode input[type=text] {
-  display:block;
-}
-
-ul li.editMode label {
-  display:none;
 }

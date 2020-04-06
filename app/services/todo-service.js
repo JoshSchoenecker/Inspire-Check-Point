@@ -9,6 +9,7 @@ const todoApi = axios.create({
 
 class TodoService {
   getTodos() {
+    
     console.log("Getting the Todo List");
     todoApi.get()
     .then(res => {
@@ -28,6 +29,7 @@ class TodoService {
         console.log(res.data.data);
         let newTodo = new Todo(res.data)
         let todos = [newTodo, ...store.State.todos]
+        store.commit('todos', todos)
         this.getTodos()
       })
       .catch(err => console.error(err));
@@ -35,11 +37,16 @@ class TodoService {
 
   toggleTodoStatusAsync(todoId) {
     let todo = store.State.todos.find(todo => todo.id == todoId);
-    //TODO Make sure that you found a todo,
-    //		and if you did find one
-    //		change its completed status to whatever it is not (ex: false => true or true => false)
-
-    todoApi.put(todoId, todo);
+    todo.completed = !todo.completed
+    console.log(todo.completed);
+    
+    debugger
+    todoApi.put(todoId, todo)
+    .then(res => {
+      console.log("todoStatus", todo.completed);
+      this.getTodos()
+    })
+    .catch(err => console.error(err));
     //TODO do you care about this data? or should you go get something else?
   }
 

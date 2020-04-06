@@ -6,12 +6,16 @@ import Todo from "../models/Todo.js";
 function _drawTodos() {
   console.log("controller draw works");
   
+  
+
   let template = ''
   let todos = store.State.todos
 
   todos.forEach(todo => template += todo.Template)
   document.getElementById("todos").innerHTML = template
+  document.getElementById('todoNum').innerHTML = `Tasks left: ${todos.length}`
 }
+
 
 export default class TodoController {
   constructor() {
