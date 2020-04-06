@@ -14,6 +14,12 @@
   box-shadow: 5px 5px 20px 1px aliceblue;
 }
 
+.bg-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 65rem;
+}
+
 .rowFlex {
   display: flex !important;
   justify-content: space-between;
