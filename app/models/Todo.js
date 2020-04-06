@@ -7,13 +7,16 @@ export default class Todo {
     }
 
     get Template() {
-        return /* html */ `
+        let template =  /* html */ `
         <li>
-        <input type="checkbox" onclick="app.todoController.toggleTodoStatus('${this.id}')">
+        <input type="checkbox"`
+        template += this.completed ? " checked " : "" 
+        template += `onclick="app.todoController.toggleTodoStatus('${this.id}')">
         <label>${this.description}</label>
         <button type="button" onclick="app.todoController.removeTodo('${this.id}')" class="delete">Delete</button>
     </li>
         `
+        return template
     }
 
     // checked=${this.completed}
