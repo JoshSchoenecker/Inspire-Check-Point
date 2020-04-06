@@ -8,7 +8,7 @@ function drawBgImg() {
     document.body.style.backgroundImage = `url(${store.State.bgImage.large_url})`
     document.getElementById("bg-image").style.backgroundSize = 'cover'
     document.getElementById("bg-image").style.backgroundRepeat = 'no-repeat'
-    document.getElementById("bg-image").style.height = '55rem'
+    document.getElementById("bg-image").style.height = '65rem'
 }
 export default class ImageController {
 
