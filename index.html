@@ -1,57 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Inspire</title>
-	<link rel="stylesheet" href="assets/css/style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Inspire</title>
+  </head>
 
+  <body id="bg-image  container-fluid">
 
-<body id="bg-image">
+	<!-- Weather & Todo -->
+    <div class="row" style="width: 100%;">
 
-	<!-- Quote -->
-	<header class="row">
-		<div class='col-12 quoteStyle' id="quote">
-		</div>
-	</header>
+      <div class="col-4 ml-2 mt-2">
+        <div class="p-1 todoBody todocontainer">
+          <label for="new-task">
+            Add Item
+          </label>
+          <p id="todoNum"></p>
+          <form onsubmit="app.todoController.addTodo(event)">
+            <input
+              class="form-control"
+              name="description"
+              id="new-task"
+              type="text"
+            />
+            <button type="submit" class="form-control">
+              Add
+            </button>
+          </form>
+          <h3 class="text-center">Todo</h3>
+          <!-- id="incomplete-tasks" taken from <ul> -->
+          <ul id="todos"></ul>
+        </div>
+	  </div>
+	  
+	  <div class="col-2 ">
+		  <div class="weatherStyle text-center p-0">
+			  <div id="weather">Your Weather Template</div>
+			</div>
+	  </div>
+	  
+    </div>
 
+    <!-- Quote -->
+    <div class="row justify-content-center">
+      <div class="col-6 quoteStyle">
+        <div id="quote"></div>
+      </div>
+    </div>
 
-
-
-<div class="row container-fluid rowFlex">
-
-	<div class="col-6 todoBody todocontainer">
-        <label for="new-task">
-			Add Item
-		</label>
-		<p id="todoNum"></p>
-		<form onsubmit="app.todoController.addTodo(event)" >
-			<input class="form-control" name="description" id="new-task" type="text">
-			<button type="submit" class="form-control">
-				Add
-			</button>
-		</form>
-      
-	  	<h3>Todo</h3>
-<!-- id="incomplete-tasks" taken from <ul> -->
-    	<ul id="todos">
-    	</ul>
-	</div>
-<!-- Weather -->
-	<div class="weatherStyle col-6 text-center">
-		<div id="weather"> Your Weather Template </div>
-	</div>
-</div>
-
-
-
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-	<script type="module" src="app/main.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="module" src="app/main.js"></script>
+  </body>
 </html>
-<html>
