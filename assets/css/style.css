@@ -8,6 +8,7 @@
   text-align: center;
   position: fixed;
   bottom: 1px;
+  text-shadow: 0px 0px 1.5rem black;
 }
 
 .bg-image {
@@ -26,19 +27,22 @@
 .weatherStyle {
   position: fixed;
   right: 1rem;
-
+  color: white;
+  background-color: rgba(51, 51, 51, 0.377);
+  padding: 1px !important;
 }
 
 /* NOTE todo styling */
 .todoBody {
   left: 1.5rem;
   top: 1rem;
-  color: #333;
+  color: white;
   font-family: Lato, sans-serif;
+  /* text-shadow: 1px 2px 1.5rem black; */
 }
 .todocontainer {
-  background-color: whitesmoke;
-  border: 2px groove black;
+  /* text-shadow: 1px 2px 1.5rem black; */
+  background-color: rgba(51, 51, 51, 0.377);
   border-radius: 0.3rem;
 }
 ul {
@@ -58,12 +62,12 @@ button {
   outline: none;
 }
 button {
+  /* text-shadow: 1px 2px 1.5rem black; */
   background: none;
   border: 0px;
-  color: black;
-  font-size: 15px;
-  width: 60px;
-  margin: 10px 0 0;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bolder;
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
@@ -73,21 +77,20 @@ button:hover {
 /* Heading */
 h3,
 label[for="new-task"] {
-  color: #333;
+  color: white;
   font-weight: 700;
   font-size: 15px;
   border-bottom: 2px solid #333;
-  padding: 30px 0 10px;
+  padding: 0px 0 10px;
   margin: 0;
   text-transform: uppercase;
 }
 input[type="text"] {
-  margin: 0;
+  margin: auto;
   font-size: 18px;
   line-height: 18px;
   height: 18px;
   padding: 10px;
-  border: 1px solid #ddd;
   background: #fff;
   border-radius: 6px;
   font-family: Lato, sans-serif;
@@ -96,6 +99,9 @@ input[type="text"] {
 input[type="text"]:focus {
   color: #333;
 }
+form {
+  margin: auto;
+}
 
 /* New Task */
 label[for="new-task"] {
@@ -103,8 +109,7 @@ label[for="new-task"] {
   margin: 0 0 20px;
 }
 input#new-task {
-  float: left;
-  width: 318px;
+  width: 20rem;
 }
 
 /* Task list */
@@ -129,4 +134,13 @@ li > input[type="text"] {
 }
 li > .delete:hover {
   color: #cf2323;
+}
+
+.addBtn {
+  color: white;
+  border: 0px;
+  background: none;
+  text-align: center;
+  /* width: 10px;
+  margin: auto; */
 }

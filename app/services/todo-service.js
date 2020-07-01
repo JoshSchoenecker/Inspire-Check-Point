@@ -39,8 +39,6 @@ class TodoService {
     let todo = store.State.todos.find(todo => todo.id == todoId);
     todo.completed = !todo.completed
     console.log(todo.completed);
-    
-    debugger
     todoApi.put(todoId, todo)
     .then(res => {
       console.log("todoStatus", todo.completed);

@@ -13,7 +13,7 @@ export default class Todo {
         template += this.completed ? " checked " : "" 
         template += `onclick="app.todoController.toggleTodoStatus('${this.id}')">
         <label>${this.description}</label>
-        <button type="button" onclick="app.todoController.removeTodo('${this.id}')" class="delete">Delete</button>
+        <button type="button" onclick="app.todoController.removeTodo('${this.id}')" class="delete float-right mr-3 mt-2">&times;</button>
     </li>
         `
         return template
